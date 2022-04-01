@@ -54,6 +54,7 @@ body {
   font-weight: 500;
   color: #000;
   background-color: #fafafa;
+  z-index: -4;
 }
 
 main {

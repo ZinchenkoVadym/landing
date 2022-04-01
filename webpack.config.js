@@ -2,7 +2,6 @@ const path = require('path')
 const HTMLWebpackPlugin = require('html-webpack-plugin')
 const {CleanWebpackPlugin} = require('clean-webpack-plugin')
 const webpack = require('webpack');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports =    {
     context: path.resolve(__dirname, 'src'),
@@ -13,15 +12,16 @@ module.exports =    {
         path: path.resolve(__dirname, 'dist')
     },
     plugins: [
+        new HTMLWebpackPlugin({
+            template: "./index.html"
+        }),
         new webpack.ProvidePlugin({
             $: 'jquery',
             jQuery: 'jquery',
             'window.jQuery': 'jquery'
         }),
-        new HTMLWebpackPlugin({
-            template: "./index.html"
-        }),
-        new CleanWebpackPlugin()
+
+        new CleanWebpackPlugin(),
     ],
     module: {
         rules: [

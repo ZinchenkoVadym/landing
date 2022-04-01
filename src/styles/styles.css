@@ -629,22 +629,23 @@
 }
 
 .service-price__container {
- padding: 50px 15px;
   position: relative;
+  padding: 50px 15px 10px 15px;
 }
 
 .service-price__items {
   display: flex;
   flex-wrap: wrap;
   margin: 0 -15px;
-
+  padding-bottom: 15px;
 }
+
 
 .service-price__item {
   flex: 1 1 33.333%;
   padding: 0 15px;
   text-align: center;
-
+  height: 420px ;
 }
 
 .price-item__header {
@@ -701,12 +702,6 @@
   border-bottom: 1px solid rgba(78,78,78,0.42);
 }
 
-@media (max-width: 550px) {
-  .service-price__items {
-    max-width: 400px;
-    margin: 0 auto;
-  }
-}
 @media (max-width: 850px) {
   .service-price__items {
     max-width: 500px;
@@ -715,12 +710,11 @@
   .service-price__item {
     flex: 1 1 100%;
   }
-
-  .service-price__item:not(:last-child) {
-    margin-bottom: 35px;
-  }
-  .service-price__container {
-    padding: 10px 15px;
+}
+@media (max-width: 550px) {
+  .service-price__items {
+    max-width: 400px;
+    margin: 0 auto;
   }
 }
 
@@ -833,11 +827,6 @@ margin: 20px;
   color: white;
 }
 
-@media (max-width: 850px) {
-  .service-price__container {
-    padding: 50px 15px;
-  }
-}
 
 /*-----------------CONTACT-US section-------------*/
 
@@ -936,7 +925,7 @@ margin: 20px;
 
 .pattern-header {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 45px;
   opacity: 0;
 }
 
@@ -1000,7 +989,7 @@ margin: 20px;
 
 .key__opacity {
   animation-name: opacity;
-  animation-duration: 3s;
+  animation-duration: 4.5s;
   opacity: 1;
 }
 

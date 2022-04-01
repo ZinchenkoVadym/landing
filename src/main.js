@@ -1,26 +1,23 @@
-// import * as $ from 'jquery'
-// import 'bootstrap/dist/css/bootstrap.min.css';
-// import './styles/basic.css';
-// import './styles/styles.css';
-// import './styles/preloader.css';
-// import 'owl.carousel/dist/assets/owl.carousel.css';
-// import 'owl.carousel/dist/assets/owl.theme.default.css'
-// import 'owl.carousel';
-
-
+import * as $ from 'jquery'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './styles/basic.css';
+import './styles/styles.css';
+import './styles/preloader.css';
+import 'owl.carousel/dist/assets/owl.carousel.css';
+import 'owl.carousel/dist/assets/owl.theme.default.css'
+import 'owl.carousel';
 
 $(document).ready(function () {
-
-    let body = $('body')
-    $(window).on('load', function () {
-        body.addClass('loaded_hiding');
-        window.setTimeout(function () {
-            body.addClass('loaded');
-            body.removeClass('loaded_hiding');
-        }, 1500);
-    })
+    // let body = $('body')
+    // $(window).on('DOMContentLoaded', function () {
+    //     body.addClass('loaded_hiding');
+    //     window.setTimeout(function () {
+    //         body.addClass('loaded');
+    //         body.removeClass('loaded_hiding');
+    //
+    //     }, 500);
+    // })
     // Top
-
     const form = document.querySelector('.one-section__block-form')
     const headers = document.querySelectorAll('.pattern-header')
     const tabsButtons = document.querySelector('.tabs__buttons')
@@ -56,6 +53,7 @@ $(document).ready(function () {
     translateTopObserver.observe(form)
     translateTopObserver.observe(tabsButtons)
     headers.forEach((header) => translateTopObserver.observe(header))
+
 
 
 
