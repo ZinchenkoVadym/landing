@@ -1,0 +1,37 @@
+@import "./../variables";
+
+.footer {
+  background-color: $blue-bg;
+
+  .footer_body {
+    padding: 15px 15px;
+    text-align: center;
+
+    p {
+      margin: 13px 0 0 0;
+      color: $white-color;
+    }
+
+    .icons__items__footer {
+      display: flex;
+      justify-content: center;
+
+      li {
+        height: 25px;
+        width: 25px;
+        margin: 0 15px 0 0;
+        cursor: pointer;
+
+        img {
+          transition: transform 1s;
+
+          &:hover {
+            transform: rotate(1turn);
+          }
+        }
+      }
+    }
+  }
+}
+
+

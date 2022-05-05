@@ -1,0 +1,130 @@
+@import "./../variables";
+@import "./../templates";
+
+.page__service-price {
+  background-color: #e1e1e1;;
+
+  .service-price__container {
+    position: relative;
+    padding: 50px 15px 10px 15px;
+
+    .service-price__header {
+      @extend %pattern-header;
+
+      .service-price__title {
+        @extend %pattern-title
+      }
+
+      .service-price__line {
+        @extend %pattern-line
+      }
+
+      .service-price__text {
+        @extend %pattern-text
+      }
+    }
+
+    .service-price__items {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-column-gap: 30px;
+      grid-row-gap: 30px;
+      justify-items: center;
+      margin: 0 auto;
+
+      .service-price__item {
+        width: 100%;
+        text-align: center;
+        height: 420px;
+
+        .price-item__header {
+          background-color: #37495e;
+        }
+
+        .price-item__title {
+          color: $white-color;
+          text-align: center;
+          font-size: 22px;
+          font-weight: bold;
+          padding: 15px;
+          margin: 0 auto;
+        }
+
+        .price-item__line {
+          content: '';
+          display: block;
+          height: 2px;
+          width: 100%;
+          background: $white-color;
+        }
+
+        .price-item__value {
+          color: $white-color;
+          font-size: 72px;
+          padding-top: 20px;
+        }
+
+        .price-item__text {
+          padding: 10px;
+          color: $white-color;
+          font-style: italic;
+          margin: 0 auto;
+        }
+
+        .price-item__hover {
+          background-color: $orange-color;
+          color: $white-color;
+          transition: 1s;
+          padding: 15px;
+          margin-bottom: -40px;
+          cursor: pointer;
+
+          &.active {
+            margin: 0;
+          }
+        }
+
+        .options__list {
+          li {
+            padding: 7px;
+            background-color: $white-color;
+            color: slategray;
+            border-bottom: 1px solid rgba(78, 78, 78, 0.42);
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width: 900px) {
+  .page__service-price {
+    .service-price__container {
+      .service-price__items {
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+
+        .service-price__item {
+          max-width: 400px;
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width: 700px) {
+  .page__service-price {
+    .service-price__container {
+      .service-price__items {
+        grid-template-columns: repeat(1, 1fr);
+
+        .service-price__item {
+          max-width: 450px;
+        }
+      }
+    }
+  }
+}

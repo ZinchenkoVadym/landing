@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles/basic.css">
-    <link rel="stylesheet" href="styles/styles.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing page</title>
-    <link rel="stylesheet" href="../node_modules/owl.carousel/dist/assets/owl.carousel.css">
-    <link rel="stylesheet" href="../node_modules/owl.carousel/dist/assets/owl.theme.default.css">
 </head>
 <body>
+<div class="preloader">
+    <div class="spinner-border text-warning" style="width: 300px; height: 300px; font-weight: bold" role="status">
+        <span class="sr-only"></span>
+    </div>
+</div>
 <div class="wrapper">
     <header class="header">
         <div class="header__container container">
@@ -28,7 +27,7 @@
                         <li><a href="#about">About</a></li>
                         <li><a href="#pricing">Pricing</a></li>
                         <li><a href="#reviews">Reviews</a></li>
-                        <li><a href="#contacts" title="">Contacts</a></li>
+                        <li><a href="#contacts">Contacts</a></li>
                     </ul>
                 </nav>
             </div>
@@ -45,9 +44,9 @@
                             project. This might include deliverables and assets, or more intangible objectives like
                             increasing productivity or motivation.</p>
                     </div>
-                    <button class="ax-template__button pattern-btn-opacity">Download</button>
+                    <button class="ax-template__button">Download</button>
                 </div>
-                <div class="one-section__block-form key__opacity-translate">
+                <div class="one-section__block-form">
                     <div class="one-section__title-form">Try your <span>FREE</span> Trial Today</div>
                     <form class="one-section__form-items">
                         <input type="text" placeholder="Name" name="name">
@@ -103,7 +102,7 @@
                                 using R as an undergrad, then learned some more R and some Unix shell scripting in a
                                 Software Carpentry workshop, but has no other training as a programmer. Bhadra’s team is
                                 developing tools to detect structural similarities between proteins.</p>
-                            <button class="pattern-btn-orange">Download</button>
+                            <button class=tab-btn-download>Download</button>
                         </li>
                         <li class="tabs__item">
                             <h3 class="tabs-item__title">Efraim</h3>
@@ -112,7 +111,7 @@
                                 mastered C in order to maintain the control software for some second-hand remote sensing
                                 equipment. Efraim recently retired, and is now an active member of several citizen
                                 science projects. </p>
-                            <button class="pattern-btn-orange">Download</button>
+                            <button class="tab-btn-download">Download</button>
                         </li>
                         <li class="tabs__item">
                             <h3 class="tabs-item__title">Sumi</h3>
@@ -122,7 +121,7 @@
                                 several years, and has picked up bits and pieces of JavaScript while doing so. Sumi is
                                 about to start looking for a job, and wants to create an interactive website to showcase
                                 her research.</p>
-                            <button class="pattern-btn-orange">Download</button>
+                            <button class="tab-btn-download">Download</button>
                         </li>
                     </ul>
                 </div>
@@ -135,7 +134,7 @@
             <div class="interesting-one__container interesting__container container">
                 <div class="container__padding-interesting">
                     <div class="interesting-one__img interesting__img interesting__block">
-                        <img src="img/human-one-photo.png" alt="people">
+                        <img src="./img/human-one-photo.png" alt="person">
                     </div>
                     <div class="interesting-one__block-text interesting__block-text interesting__block">
                         <h2 class="interesting-block-info__title">We and our partners process data to provide</h2>
@@ -148,13 +147,15 @@
                         <div class="interesting-one-info__footer-items">
                             <div class="interesting-one-info__footer-item"><img src="img/icon4.png" alt="people"></div>
                             <div class="interesting-one-info__footer-item-two"><h3>Keep</h3>
-                                <p class="interesting-block-info__text">We keep your data safe using appropriate technical and organizational measures.</p></div>
+                                <p class="interesting-block-info__text">We keep your data safe using appropriate
+                                    technical and organizational measures.</p></div>
                         </div>
                         <div class="interesting-one-info__footer-items">
                             <div class="one_footer_item">
-                                <img src="img/icon4.png" alt="people"></div>
+                                <img src="./img/icon4.png" alt="person"></div>
                             <div class="interesting-one-info__footer-item-two"><h3>Encourage</h3>
-                                <p class="interesting-block-info__text">We encourage you to take control of your data. Please keep your data up to date and accurate. </p></div>
+                                <p class="interesting-block-info__text">We encourage you to take control of your data.
+                                    Please keep your data up to date and accurate. </p></div>
                         </div>
                     </div>
                 </div>
@@ -181,10 +182,12 @@
         <section class="page__advantage">
             <div class="advantage__container container">
                 <div class="advantage__body">
-                    <div class="pattern-header">
-                        <h2 class="advantage__header-title pattern-title">WHY THIS IS AWESOME</h2>
-                        <div class="advantage__header-title pattern-line"></div>
-                        <p class="advantage__header-title pattern-text">Awesome definition, causing or inducing awe; inspiring an overwhelming feeling of reverence, admiration, or fear: an awesome sight. See more.</p>
+                    <div class="advantage__header header-section">
+                        <h2 class="advantage__header-title">WHY THIS IS AWESOME</h2>
+                        <div class="advantage__header-line"></div>
+                        <p class="advantage__header-text">Awesome definition, causing or inducing awe;
+                            inspiring an overwhelming feeling of reverence, admiration, or fear: an awesome sight. See
+                            more.</p>
                     </div>
                     <div class="advantage__items">
                         <div class="advantage__item">
@@ -216,10 +219,11 @@
         <section class="page__service-price" id="pricing">
             <div class="service-price__container container">
                 <div class="service-price__body">
-                    <div class="service-price__header pattern-header">
-                        <h2 class="service-price__title pattern-title">PRICING OPTIONS</h2>
-                        <div class="service-price__line pattern-line"></div>
-                        <p class="service-price__text pattern-text">Options contracts can be priced using mathematical models such as the Black-Scholes or Binomial pricing models.</p>
+                    <div class="service-price__header header-section">
+                        <h2 class="service-price__title">PRICING OPTIONS</h2>
+                        <div class="service-price__line"></div>
+                        <p class="service-price__text">Options contracts can be priced using mathematical
+                            models such as the Black-Scholes or Binomial pricing models.</p>
                     </div>
                     <div class="service-price__items">
                         <div class="service-price__item price-item">
@@ -282,10 +286,12 @@
         </section>
         <section class="page__our-customers" id="reviews">
             <div class="our-customers__container container">
-                <div class="our-customers__header pattern-header">
-                    <h2 class="our-customers__title pattern-title">WHAT OUR CUSTOMERS ARE SAYING</h2>
-                    <div class="our-customers__line pattern-line"></div>
-                    <p class="our-customers__text pattern-text">Access the results from the latest Atradius Collections Customer Satisfaction Survey as well as the reviews of Atradius customers in written testimonials.
+                <div class="our-customers__header header-section">
+                    <h2 class="our-customers__title">WHAT OUR CUSTOMERS ARE SAYING</h2>
+                    <div class="our-customers__line"></div>
+                    <p class="our-customers__text">Access the results from the latest Atradius Collections
+                        Customer Satisfaction Survey as well as the reviews of Atradius customers in written
+                        testimonials.
                     </p>
                 </div>
                 <div class="owl-carousel owl-theme owl-loaded">
@@ -294,8 +300,9 @@
                             <div class="owl-item">
                                 <div class="owl-item__body">
                                     <div class="owl-item__text_container">
-                                    <p class="owl-item__text">I am happy just to have a job with G&P. This is the best
-                                        service company I have ever been with.</p>
+                                        <p class="owl-item__text">I am happy just to have a job with G&P. This is the
+                                            best
+                                            service company I have ever been with.</p>
                                     </div>
                                     <div class="owl__customer">
                                         <div class="img__customer">
@@ -308,9 +315,10 @@
                             </div>
                             <div class="owl-item">
                                 <div class="owl-item__body">
-                                        <div class="owl-item__text_container">
-                                    <p class="owl-item__text">
-                                        I have to say that G&P Land has proven to be the best service company I have been associated with in my time in Right of Way. </p>
+                                    <div class="owl-item__text_container">
+                                        <p class="owl-item__text">
+                                            I have to say that G&P Land has proven to be the best service company I have
+                                            been associated with in my time in Right of Way. </p>
                                     </div>
                                     <div class="owl__customer">
                                         <div class="img__customer">
@@ -324,7 +332,8 @@
                             <div class="owl-item">
                                 <div class="owl-item__body">
                                     <div class="owl-item__text_container">
-                                    <p class="owl-item__text">I really appreciate the way you handle things with all of us  out working on these projects! </p>
+                                        <p class="owl-item__text">I really appreciate the way you handle things with all
+                                            of us out working on these projects! </p>
                                     </div>
                                     <div class="owl__customer">
                                         <div class="img__customer">
@@ -338,9 +347,10 @@
                             <div class="owl-item">
                                 <div class="owl-item__body">
                                     <div class="owl-item__text_container">
-                                    <p class="owl-item__text">Just wanted to say Happy Holidays and thanks for picking me to work for your company  go G&P. Love u guys.</p>
+                                        <p class="owl-item__text">Just wanted to say Happy Holidays and thanks for
+                                            picking me to work for your company go G&P. Love u guys.</p>
                                     </div>
-                                        <div class="owl__customer">
+                                    <div class="owl__customer">
                                         <div class="img__customer">
                                             <img src="img/ava-carousel.png" alt="people">
                                         </div>
@@ -356,20 +366,22 @@
         </section>
         <section class="page__pricing-options">
             <div class="pricing-options__container">
-                <div class="pricing-options__body pattern-header" style="margin-bottom: 30px">
-                    <h2 class="pricing-options__title pattern-title">PRICING OPTIONS</h2>
-                    <div class="pricing-options__line pattern-line" style="background-color: white"></div>
-                    <p class="pricing-options__text pattern-text">Essentially, option pricing theory provides an evaluation of an option's fair value, which traders incorporate into their strategies.</p>
+                <div class="pricing-options__body header-section" style="margin-bottom: 30px">
+                    <h2 class="pricing-options__title">PRICING OPTIONS</h2>
+                    <div class="pricing-options__line"></div>
+                    <p class="pricing-options__text">Essentially, option pricing theory provides an
+                        evaluation of an option's fair value, which traders incorporate into their strategies.</p>
                 </div>
-                <button class="pricing-options__btn pattern-btn-opacity">Download</button>
+                <button class="pricing-options__btn">Download</button>
             </div>
         </section>
         <section class="page__contact-us" id="contacts">
             <div class="contact-us__container container">
-                <div class="contact-us__header pattern-header">
-                    <h2 class="contact-us__title pattern-title">CONTACT US</h2>
-                    <div class="contact-us__line pattern-line"></div>
-                    <p class="contact-us__text pattern-text">Welcome to contact us for more detail information and inquiry.</p>
+                <div class="contact-us__header header-section">
+                    <h2 class="contact-us__title ">CONTACT US</h2>
+                    <div class="contact-us__line "></div>
+                    <p class="contact-us__text ">Welcome to contact us for more detail information and
+                        inquiry.</p>
                 </div>
                 <div class="contact-us__body">
                     <form class="contact-us__form form-contacts">
@@ -383,7 +395,7 @@
                                 <textarea placeholder="Message"></textarea>
                             </div>
                         </div>
-                        <button type="submit" class="form-contacts__btn pattern-btn-orange">Send message</button>
+                        <button type="submit" class="form-contacts__btn">Send message</button>
                     </form>
                 </div>
             </div>
@@ -416,12 +428,5 @@
         </div>
     </footer>
 </div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="../node_modules/jquery/dist/jquery.min.js"></script>
-<script src="../node_modules/owl.carousel/dist/owl.carousel.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
-        crossorigin="anonymous"></script>
-<script src="main.js"></script>
 </body>
 </html>

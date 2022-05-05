@@ -1,18 +1,16 @@
-// import * as $ from 'jquery'
-// import 'bootstrap/dist/css/bootstrap.min.css';
-// import './styles/basic.css';
-// import './styles/styles.css';
-// import 'owl.carousel/dist/assets/owl.carousel.css';
-// import 'owl.carousel/dist/assets/owl.theme.default.css'
-// import 'owl.carousel';
+import './styles/styles.scss';
+import * as $ from 'jquery';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'owl.carousel/dist/assets/owl.carousel.css';
+import 'owl.carousel/dist/assets/owl.theme.default.css';
+import 'owl.carousel';
 
 
 $(document).ready(function () {
-
-
+    $('.preloader').delay(500).fadeOut();
     // Top
     const form = document.querySelector('.one-section__block-form')
-    const headers = document.querySelectorAll('.pattern-header')
+    const headers = document.querySelectorAll('.header-section')
     const tabsButtons = document.querySelector('.tabs__buttons')
 
     // Left
@@ -97,6 +95,5 @@ $(document).ready(function () {
         }
     })
 });
-
 
 

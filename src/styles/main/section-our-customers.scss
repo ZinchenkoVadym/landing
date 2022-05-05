@@ -1,0 +1,105 @@
+@import "./../variables";
+@import "./../templates";
+
+.our-customers__container {
+  padding: 80px 15px;
+
+  .our-customers__header {
+    @extend %pattern-header;
+
+    .our-customers__title {
+      @extend %pattern-title
+    }
+
+    .our-customers__line {
+      @extend %pattern-line
+    }
+
+    .our-customers__text {
+      @extend %pattern-text
+    }
+  }
+
+  .owl-carousel {
+    margin: 0 auto;
+    position: relative;
+
+    .owl-item__body {
+      margin: 20px;
+
+      .owl-item__text_container {
+        height: 130px;
+        background-color: rgba(44, 44, 44, 0.09);
+        padding: 10px;
+        margin-bottom: 20px;
+        border-radius: 20px;
+        max-width: 350px;
+        position: relative;
+
+        .owl-item__text {
+          font-weight: bold;
+          border-radius: 10px;
+          margin: 0;
+        }
+
+        &:after {
+          content: '';
+          position: absolute; /* Абсолютное позиционирование */
+          left: 30px;
+          bottom: -30px; /* Положение треугольника */
+          border: 15px solid transparent; /* Прозрачные границы */
+          border-top: 15px solid rgba(44, 44, 44, 0.09);; /* Добавляем треугольник */
+        }
+      }
+
+      .owl__customer {
+        align-items: center;
+
+        .img__customer {
+          padding-left: 10px;
+          border-radius: 50%;
+          width: 70px;
+          height: 70px;
+
+          img {
+            width: 100%;
+          }
+        }
+
+        .customer__name {
+          margin-left: 10px;
+        }
+      }
+    }
+
+    .owl-prev {
+      span {
+        font-size: 40px;
+        font-weight: bold;
+        color: $orange-color;
+      }
+
+      &:hover {
+        background: none;
+      }
+    }
+
+    .owl-next {
+      span {
+        font-size: 40px;
+        font-weight: bold;
+        color: $orange-color;
+      }
+
+      &:hover {
+        background: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  .our-customers__container {
+    padding: 40px 15px;
+  }
+}

@@ -1,0 +1,91 @@
+@import "variables";
+
+//patterns
+
+%pattern-header {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+%pattern-title {
+  font-size: 34px;
+  @media (max-width: 500px) {
+    font-size: 26px;
+  }
+}
+
+%pattern-line {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 50px;
+  background: $orange-color;
+  margin: 0 auto;
+}
+
+%pattern-text {
+  margin: 10px 0 0 0;
+}
+
+//mixins
+
+@mixin btn-style($bg-color, $bg-color-hover) {
+  color: $white-color;
+  border: 2px solid $white-color;
+  background-color: $bg-color;
+  padding: 10px 30px;
+  transition: 0.5s;
+  &:hover{
+    background-color: $bg-color-hover;
+  }
+}
+
+//keyframes
+
+.key__opacity {
+  animation-name: opacity;
+  animation-duration: 4.5s;
+  opacity: 1;
+}
+
+.key__opacity-translate-top {
+  animation-name: opacity-translate-top;
+  animation-duration: 3s;
+  opacity: 1;
+}
+.key__opacity-translate-left {
+  animation-name: opacity-translate-left;
+  animation-duration: 3s;
+  opacity: 1;
+}
+
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes opacity-translate-top {
+  from {
+    transform: translateY(15px);
+    opacity: 0;
+  }
+  to{
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes opacity-translate-left {
+  from {
+    transform: translateX(20px);
+    opacity: 0;
+  }
+  to{
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
