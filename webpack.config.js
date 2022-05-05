@@ -28,14 +28,14 @@ module.exports = {
     entry: './main.js',
     output: {
         filename: `./js/${filename('js')}`,
-        path: path.resolve(__dirname, 'dist'),
+        path: path.resolve(__dirname, 'public'),
         assetModuleFilename: "./img/[name][hash][ext]",
         publicPath: ''
     },
     devServer: {
         historyApiFallback: true,
         static:{
-            directory:path.join(__dirname, 'dist')
+            directory:path.join(__dirname, 'public')
         },
         open: true,
         compress: true,
